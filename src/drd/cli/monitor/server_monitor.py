@@ -26,6 +26,7 @@ class DevServerMonitor:
         self.output_monitor = OutputMonitor(self)
         self.retry_count = 0
         self.metadata_manager = ProjectMetadataManager(project_dir)
+        self.MAX_RETRIES = MAX_RETRIES
 
     def start(self):
         self.should_stop.clear()
